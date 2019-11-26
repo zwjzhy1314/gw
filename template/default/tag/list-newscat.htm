@@ -1,0 +1,20 @@
+<ul class="am-list">
+{loop $tags $i $t}
+                <li class="am-g am-scrollspy-init am-scrollspy-inview" >
+                    <div class="am-u-sm-12 am-u-md-4 am-u-lg-4 am-list-thumb">
+                        <a href="{$t[linkurl]}">
+                            <img src="{$t[thumb]}" alt="{$t[title]}" onError="this.src='{DT_SKIN}image/nopic.jpg'">
+                        </a>
+                    </div>
+                    <div class="newsico am-fl">
+                        <i class="am-icon-clock-o">{if $datetype}{timetodate($t[addtime], $datetype)}{/if}</i>
+                        <i class="am-icon-hand-pointer-o">{$t[hits]}</i>
+                    </div>
+                    <div class=" am-u-sm-12 am-u-md-8 am-u-lg-8 am-list-main">
+                        <h3 class="am-list-item-hd"><a href="{$t[linkurl]}">{$t[title]}</a></h3>
+                        <div class="am-list-item-text">{$t[introduce]}</div>
+                    </div>
+                </li>
+{/loop}
+</ul>
+{if $showpage && $pages}<div class="pages">{$pages}</div>{/if}

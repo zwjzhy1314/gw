@@ -1,0 +1,1 @@
+var DTPath = "http://www.mxiaotu.com/";var DTMob = "http://www.mxiaotu.com/mobile/";var SKPath = "http://www.mxiaotu.com/skin/default/";var MEPath = "http://www.mxiaotu.com/member/";var DTEditor = "fckeditor";var CKDomain = "";var CKPath = "/";var CKPrex = "cfy_";

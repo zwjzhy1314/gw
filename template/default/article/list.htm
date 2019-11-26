@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>{if $seo_title}{$seo_title}{else}{if $head_title}{$head_title}{$DT[seo_delimiter]}{/if}{if $city_sitename}{$city_sitename}{else}{$DT[sitename]}{/if}{/if}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  
+  <link rel="alternate icon" type="{DT_STATIC}resource/img/hengwang-1.png" href="{DT_STATIC}resource/img/hengwang-1.png">
+  <link rel="stylesheet" href="{DT_STATIC}resource/css/amazeui.css"/>
+  <link rel="stylesheet" href="{DT_STATIC}resource/css/style.css"/>
+  <link rel="stylesheet" href="{DT_STATIC}resource/css/news.css"/>
+
+</head>
+<body>
+<script language="javascript" src="{DT_STATIC}resource/js/header.js"></script>
+<div class="toppic">
+	 <div class="am-container-1">
+	 <div class="toppic-title left">
+			<i class="am-icon-newspaper-o toppic-title-i"></i>
+			<span class="toppic-title-span">新闻动态</span>
+			<p>About Us</p>
+		</div>
+		<div class="right toppic-progress">
+			<span><a href="{DT_STATIC}" class="w-white">首页</a></span>
+			<i class=" am-icon-arrow-circle-right w-white"></i>
+			<span><a href="{DT_STATIC}news" class="w-white">新闻动态</a></span>
+		</div>
+	</div>
+</div>
+
+<div class=" am-container-1 am-g">
+
+        <div style="padding-top: 2rem" class="am-u-sm-12 am-u-md-2 news-menu">
+            <ul>			
+				{loop $maincat $k $v}
+					<li class="{if $v[catid]==$catid}mi-menu-active{/if}"><a href="{$MOD[linkurl]}{$v[linkurl]}">{set_style($v[catname],$v[style])}</a></li>
+				{/loop}                
+            </ul>
+        </div>
+
+    <div style="border: 1px solid #ededed;margin: 2rem 0;" class="container news_list am-u-sm-12 am-u-md-10">
+
+        <div style="margin:0 5%" class="am-list-news-bd">
+            {php $cols = 5;}
+			{if $tags}{template 'list-newscat', 'tag'}{/if}
+        </div>
+    </div>
+</div>
+{template 'footer'}

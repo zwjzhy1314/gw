@@ -1,0 +1,24 @@
+<script language="javascript" src="{DT_STATIC}resource/js/footer.js"></script>
+<script type="text/javascript">
+{if $destoon_task}
+show_task('{$destoon_task}');
+{else}
+{php include DT_ROOT.'/api/task.inc.php';}
+{/if}
+{if $lazy}$(function(){$("img").lazyload();});{/if}
+</script>
+<script type="text/javascript">
+    var mobanstring = $("#moban").html();
+    var compiled = _.template(mobanstring);
+    $.get("data.txt", function (data, status) {
+        var dataj = JSON.parse(data).newslist;
+console.log(dataj)
+        for (var i = 0; i < 4; i++) {
+            var compiledString = compiled(dataj[i]);
+            $("#news").append($(compiledString));
+        }
+        console.log(data);
+    })
+</script>
+</body>
+</html>

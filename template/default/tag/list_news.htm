@@ -1,0 +1,6 @@
+<ul class="am-list">
+{loop $tags $i $t}
+<li class="am-g am-list-item-dated"><a href="{$t[linkurl]}" class="am-list-item-hd "><i class="am-icon-genderless"></i>{$t[title]}</a>{if $datetype}<span class="am-list-date"> {timetodate($t[addtime], $datetype)}</span>{/if}</li>
+{/loop}
+</ul>
+{if $showpage && $pages}<div class="pages">{$pages}</div>{/if}

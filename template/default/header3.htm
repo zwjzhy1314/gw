@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="{DT_CHARSET}"/>
+<title>{if $seo_title}{$seo_title}{else}{if $head_title}{$head_title}{$DT[seo_delimiter]}{/if}{if $city_sitename}{$city_sitename}{else}{$DT[sitename]}{/if}{/if}</title>
+{if $head_keywords}
+<meta name="keywords" content="{$head_keywords}"/>
+{/if}
+{if $head_description}
+<meta name="description" content="{$head_description}"/>
+{/if}
+{if $head_mobile}
+<meta http-equiv="mobile-agent" content="format=html5;url={$head_mobile}">
+{/if}
+<meta name="generator" content="DESTOON B2B - www.destoon.com"/>
+<link rel="shortcut icon" type="image/x-icon" href="{DT_STATIC}favicon.ico"/>
+<link rel="bookmark" type="image/x-icon" href="{DT_STATIC}favicon.ico"/>
+{if $head_canonical}
+<link rel="canonical" href="{$head_canonical}"/>
+{/if}
+{if $EXT[archiver_enable]}
+<link rel="archives" title="{$DT[sitename]}" href="{$EXT[archiver_url]}"/>
+{/if}
+<link rel="stylesheet" type="text/css" href="{DT_SKIN}style.css"/>
+<link rel="stylesheet" type="text/css" href="{DT_SKIN}amazeui.css"/>
+<link rel="stylesheet" type="text/css" href="{DT_SKIN}style2.css"/>
+{if $moduleid>1}
+<link rel="stylesheet" type="text/css" href="{DT_SKIN}{$module}.css"/>
+{/if}
+{if $CSS}
+{loop $CSS $css}
+<link rel="stylesheet" type="text/css" href="{DT_SKIN}{$css}.css"/>
+{/loop}
+{/if}
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="{DT_SKIN}ie6.css"/>
+<![endif]-->
+{if !DT_DEBUG}<script type="text/javascript">window.onerror=function(){return true;}</script>{/if}
+<script type="text/javascript" src="{DT_STATIC}lang/{DT_LANG}/lang.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/config.js"></script>
+<!--[if lte IE 9]><!-->
+<script type="text/javascript" src="{DT_STATIC}file/script/jquery-1.5.2.min.js"></script>
+<!--<![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<script type="text/javascript" src="{DT_STATIC}file/script/jquery-2.1.1.min.js"></script>
+<!--<![endif]-->
+<script type="text/javascript" src="{DT_STATIC}file/script/common.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/page.js"></script>
+{if $lazy}<script type="text/javascript" src="{DT_STATIC}file/script/jquery.lazyload.js"></script>{/if}
+{if $JS}
+{loop $JS $js}
+<script type="text/javascript" src="{DT_STATIC}file/script/{$js}.js"></script>
+{/loop}
+{/if}
+{php $searchid = ($moduleid > 3 && $MODULE[$moduleid]['ismenu'] && !$MODULE[$moduleid]['islink']) ? $moduleid : 5;}
+<script type="text/javascript">
+{if $head_mobile && $EXT[mobile_goto]}
+GoMobile('{$head_mobile}');
+{/if}
+var searchid = {$searchid};
+{if $itemid && $DT[anticopy]}
+document.oncontextmenu=function(e){return false;};
+document.onselectstart=function(e){return false;};
+{/if}
+</script>
+</head>
+<body>
+<header class="am-topbar header">
+    <div class="am-container-1">
+        <div class="left mi-logo">
+            <img class=" logo" src="{DT_SKIN}/image/MIXIAOTU.png"/>
+            <img class="word" src="{DT_SKIN}/image/mi-word.png"/>
+            <div style="width: 30rem;position: absolute;top: 5px;left: 200px">创亲子科学教育第一品牌</div>
+        </div>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+                data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+                class="am-icon-bars"></span>
+        </button>
+        <div class="am-collapse am-topbar-collapse right" id="doc-topbar-collapse">
+            <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
+                <ul class="am-nav am-nav-pills am-topbar-nav mi-menu">
+                    <li>
+                        <div class="am-dropdown" data-am-dropdown>
+                            <button class="am-btn am-btn-success am-dropdown-toggle">微信 <span
+                                    class="am-icon-caret-down"></span></button>
+                            <div class="am-dropdown-content">
+                                <h2>微信公众号</h2>
+                                <img src="{DT_SKIN}/image/erweima.png"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mi-menu-active"><a href="http://www.mxiaotu.com">首页</a></li>
+                    <li><a href="http://www.mxiaotu.com/mall/">科学芈盒</a></li>
+                    <li><a href="http://www.mxiaotu.com/about/customers.html">合作互赢</a></li>
+                    <li><a href="http://www.mxiaotu.com/about/community.html">芈粉社区</a></li>
+                    <li><a href="http://www.mxiaotu.com/job">加入我们</a></li>
+                    <li><a href="http://www.mxiaotu.com/news">米兔新闻</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="m b20" id="headb"></div>

@@ -1,0 +1,1 @@
+<?php defined('IN_DESTOON') or exit('Access Denied'); return array (9 => array ('catid' => '9','catname' => '科学百科','style' => '','catdir' => '9','linkurl' => 'list.php?catid=9','letter' => '','level' => '1','property' => '0','parentid' => '0','arrparentid' => '0','child' => '0','arrchildid' => '9',),); ?>
