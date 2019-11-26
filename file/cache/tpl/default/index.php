@@ -47,13 +47,14 @@
             <div class="am-u-sm-12 am-u-md-6 in_about">
                 <strong> </strong>
                 <p class="about_text">
-                    “科学芈盒”品牌由北京芈小兔教育科技有限公司创立，专注于3-12岁幼少儿STEAM科学启蒙教育体系开发，旨在打造中国儿童科学教育第一品牌，帮助中国儿童成长成为更有科学素养的强国公民，为国家培养新一代的创新应用型人才。</p>
+                    “科学芈盒”品牌由北京芈小兔教育科技有限公司创立，以“反对填鸭教学，主张不教的教育”为教育理念，致力于为全国教育培训机构及学校提供幼少儿STEAM教育解决方案。我们从教学内容提供、教学过程重构、教学思维重塑、教学目标评价等方面提供STEAM课程标准.</p>
                 <p class="about_text">
-                    旗下科学芈盒儿童创客中心，引进STEAM跨学科教育理念，以儿童为中心，以日常生活的科学现象为基础，开发出国际化且适合中国幼少儿的科学教育普及化教程，提供科学实验材料、多媒体教学素材和方法，激发、挖掘和引导孩子，让孩子与生俱来的内在生命力和潜能不断发展。真正做到玩中学，学中玩，玩中创，让孩子领悟艺术价值，培养学习兴趣，全面开发孩子的专注能力、观察能力、思维能力、动手能力和探索能力。</p>
-                <p>教育核心：激发探究欲望，培养探究能力</p>
-                <p>教育使命：为中国幼少儿培养科学思维</p>
-                <p>企业宗旨：培育幼少儿科学达人，为国家科技做贡献</p>
-                <p>教育理念：从实践中寻找真理，在动手操作中培养能力</p>
+                    公司拥有具有前瞻视野的创新团队，团队成员来自一线互联网及电子信息企业、中国科学院以及知名师范院所，拥有专业的产品研发和教学实践培训能力</p>
+<!--                <p>公司介绍：可以有宣传片，具有见产品手册</p>-->
+                <p>教学口号：小科学，大思维</p>
+                <p>教育使命：以科学教育为出发点，了解儿童，倾听儿童心声，让每一位儿童自我成长</p>
+                <p>企业宗旨：以创新为动力，传播教育理念，为儿童发展事业贡献</p>
+                <p>教育理念：反对填鸭教育，主张不教的教育</p>
                 <span style="display: none"><a href="#" target="_blank">【阅读详细】</a></span>
             </div>
         </div>
@@ -63,7 +64,7 @@
     <div class="customer-case part-all ">
         <div class="part-title">
             <i class=" am-icon-sitemap part-title-i"></i>
-            <span class="part-title-span">课程体系</span>
+            <span class="part-title-span">课程理念</span>
             <p>Curriculum System</p>
         </div>
         <ul data-am-widget="gallery" class=" am-avg-sm-1
@@ -72,7 +73,7 @@
                 <div class="am-gallery-item case-img1">
                     <a href="lesson.html">
                         <p class="kctx_title">
-                            年龄特点维度</p>
+                            STEAM研究式教学</p>
                         <img src="<?php echo DT_STATIC;?>resource/img/app1.jpg"/>
                     </a>
                 </div>
@@ -88,7 +89,7 @@
                 <div class="am-gallery-item case-img1">
                     <a href="lesson.html?trigger">
                         <p class="kctx_title">
-                            知识体系维度</p>
+                            设计思维教学方式</p>
                         <img src="<?php echo DT_STATIC;?>resource/img/app2.jpg"/>
                     </a>
                 </div>
@@ -104,7 +105,7 @@
                 <div class="am-gallery-item case-img1" style="position: relative">
                     <a href="lesson.html?trigger1">
                         <p class="kctx_title">
-                            教育理念维度</p>
+                            螺旋式课程体系与阶梯能力培养</p>
                         <img src="<?php echo DT_STATIC;?>resource/img/app3.jpg"/>
                     </a>
                 </div>
