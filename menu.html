@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>佳发教育研发投入远低同行 能否享受“新高考”改革红利存疑_公司新闻_资讯_ 北京芈小兔教育科技有限公司</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="alternate icon" type="http://www.mxiaotu.com/resource/img/hengwang-1.png" href="http://www.mxiaotu.com/resource/img/hengwang-1.png">
+    <link rel="stylesheet" href="http://www.mxiaotu.com/resource/css/amazeui.css"/>
+    <link rel="stylesheet" href="http://www.mxiaotu.com/resource/css/style.css"/>
+    <link rel="stylesheet" href="http://www.mxiaotu.com/resource/css/news.css"/>
+</head>
+<body>
+<script language="javascript" src="http://www.mxiaotu.com/resource/js/header.js"></script>
+<script type="text/javascript">var module_id= 21,item_id=377,content_id='content',img_max_width=800;</script>
+<div class="toppic">
+    <div class="am-container-1">
+        <div class="toppic-title left">
+            <i class="am-icon-newspaper-o toppic-title-i"></i>
+            <span class="toppic-title-span">新闻动态</span>
+            <p>About Us</p>
+        </div>
+        <div class="right toppic-progress">
+            <span><a href="http://www.mxiaotu.com/" class="w-white">首页</a></span>
+            <i class=" am-icon-arrow-circle-right w-white"></i>
+            <span><a href="http://www.mxiaotu.com/news" class="w-white">新闻动态</a></span>
+        </div>
+    </div>
+</div>
+<div class=" am-container-1 am-g">
+    <div style="padding-top: 2rem;margin-left: 600px;" class="am-u-sm-12 am-u-md-2 news-menu">
+        <ul>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=4">行业资讯</a></li>
+            <li class="mi-menu-active"><a href="http://www.mxiaotu.com/news/list.php?catid=5">公司新闻</a></li>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=12">芈盒视频教程</a></li>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=23">分龄盒子</a></li>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=38">车船飞行系列</a></li>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=41">分级盒子升级版</a></li>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=61">培训课程</a></li>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=64">地球宇宙系列</a></li>
+            <li class=""><a href="http://www.mxiaotu.com/news/list.php?catid=65">声光世界系列</a></li>
+
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="http://www.mxiaotu.com/file/script/content.js"></script><script language="javascript" src="http://www.mxiaotu.com/resource/js/footer.js"></script>
+<script type="text/javascript">
+    var destoon_userid = 0,destoon_username = '',destoon_message = 0,destoon_chat = 0,destoon_cart = get_cart(),destoon_member = destoon_guest = '';
+    destoon_guest = '<img src="http://www.mxiaotu.com/skin/default/image/ico-user.png" align="absmiddle"/><a href="http://www.mxiaotu.com/member/login.php">会员登录</a> &nbsp;|&nbsp; <a href="http://www.mxiaotu.com/member/register.php">免费注册</a> &nbsp;|&nbsp; <a href="http://www.mxiaotu.com/member/send.php">忘记密码</a>';
+    var oauth_site = '';
+    var oauth_user = '';
+    destoon_member += (oauth_user && oauth_site) ? '<img src="http://www.mxiaotu.com/api/oauth/'+oauth_site+'/ico.png" align="absmiddle"/><strong>'+oauth_user+'</strong> &nbsp;|&nbsp; <a href="http://www.mxiaotu.com/api/oauth/'+oauth_site+'/index.php?time=1574994089">绑定帐号</a> &nbsp;|&nbsp; <a href="javascript:" onclick="oauth_logout();">退出登录</a>' : destoon_guest;
+    $('#destoon_member').html(destoon_member);
+    $('#destoon_city').html('全国');
+    $('#destoon_cart').html(destoon_cart > 0 ? '<strong>'+destoon_cart+'</strong>' : 0);
+</script>
+<script type="text/javascript">
+    var mobanstring = $("#moban").html();
+    var compiled = _.template(mobanstring);
+    $.get("data.txt", function (data, status) {
+        var dataj = JSON.parse(data).newslist;
+        console.log(dataj)
+        for (var i = 0; i < 4; i++) {
+            var compiledString = compiled(dataj[i]);
+            $("#news").append($(compiledString));
+        }
+        console.log(data);
+    })
+</script>
+</body>
+</html>

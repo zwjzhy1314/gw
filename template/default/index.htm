@@ -1,60 +1,108 @@
 {template 'header'}
-<style type="text/css">
-    img{
-        no-repeat -9999px -9999px;
-    }
-</style>
 
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        var lazyloadImages = document.querySelectorAll("img.lazy");
+
+        var lazyloadThrottleTimeout;
+
+        function lazyload () {
+
+            if(lazyloadThrottleTimeout) {
+
+                clearTimeout(lazyloadThrottleTimeout);
+
+            }
+
+
+
+            lazyloadThrottleTimeout = setTimeout(function() {
+
+                var scrollTop = window.pageYOffset;
+
+                lazyloadImages.forEach(function(img) {
+
+                    if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                        // img.attr('src', img.attr('data-src'))
+
+                        img.src = img.getAttribute("data-img");
+                        //
+                        // img.classList.remove('lazy');
+                        // img.src = "https://ik.imagekit.io/demo/img/image10.jpeg?tr=w-400,h-300";
+                    }else{
+                        img.src = '';
+                    }
+
+                });
+
+                if(lazyloadImages.length == 0) {
+                    document.removeEventListener("scroll", lazyload);
+
+                    window.removeEventListener("resize", lazyload);
+
+                    window.removeEventListener("orientationChange", lazyload);
+
+                }
+
+            }, 20);
+
+        }
+
+
+
+        document.addEventListener("scroll", lazyload);
+
+        window.addEventListener("resize", lazyload);
+
+        window.addEventListener("orientationChange", lazyload);
+
+    });
+
+</script>
 <div class="rollpic">
     <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider="{}">
         <ul class="am-slides">
-            <li><img src="{DT_STATIC}resource/img/mi_bg1.jpg"/></li>
-            <li><img src="{DT_STATIC}resource/img/mi_bg2.jpg"/></li>
-            <li><img src="{DT_STATIC}resource/img/mi_bg3.png"/></li>
+            <li><img class="lazy" src="{DT_STATIC}resource/img/mi_bg1.jpg" data-img="{DT_STATIC}resource/img/mi_bg1.jpg"/></li>
+            <li><img class="lazy" src="{DT_STATIC}resource/img/mi_bg2.jpg" data-img="{DT_STATIC}resource/img/mi_bg2.jpg"/></li>
+            <li><img class="lazy" src="{DT_STATIC}resource/img/mi_bg3.png" data-img="{DT_STATIC}resource/img/mi_bg3.png"/></li>
         </ul>
     </div>
 </div>
 <div class="am-container-1">
-    <div class="customer-case part-all ">
-        <div class="part-title">
-
+    <div class="customer-case part-all">
+        <div class="part-title" style="margin-top:30px">
             <i class=" am-icon-user part-title-i"></i>
             <span class="part-title-span">关于我们</span>
 
             <p>about us</p>
 
         </div>
+        <!--<iframe height=498 width=510 src='http://player.youku.com/embed/XNDQ1MTQ5MDc0OA==' frameborder=0 'allowfullscreen'></iframe>-->
 
         <div class="am-g" style="margin-top: 2rem">
             <div class="am-u-sm-12 am-u-md-6">
                 <div class="focus2" id="fsD3">
                     <div id="D1pic3" class="fPic">
-                        <div class="fcon" style="display: none;"><a target="_blank" href="#"><img
-                                src="{DT_STATIC}resource/images/01.jpg" style="opacity: 1;"></a> <span
-                                class="shadow"><a
-                                target="_blank" href="#">
-                            科学芈盒走进神木黄庄幼儿园</a></span>
-                        </div>
-                        <div class="fcon" style="display: none;"><a target="_blank" href="#"><img
-                                src="{DT_STATIC}resource/images/02.jpg" style="opacity: 1;"></a> <span
-                                class="shadow"><a
-                                target="_blank" href="#">
-                            科学芈盒走进神木喜洋洋幼儿园</a></span>
-                        </div>
-
-                        <div class="fbg">
-                            <div class="D1fBt" id="D1fBt3"><a href="javascript:void(0)" hidefocus="true"
-                                                              target="_self"
-                                                              class="current"><i>1</i></a> <a
-                                    href="javascript:void(0)"
-                                    hidefocus="true" target="_self"
-                                    class=""><i>2</i></a> <a
-                                    href="javascript:void(0)" hidefocus="true" target="_self"
-                                    class=""><i>3</i></a></div>
-                        </div>
+                        <iframe height=350 width=510 src='http://player.youku.com/embed/XNDQ1MTQ5MDc0OA==' frameborder=0 'allowfullscreen'></iframe>
+                        <!--<div class="fcon" style="display: none;"><a target="_blank" href="#"><img-->
+                        <!--src="http://www.mxiaotu.com/resource/images/01.jpg" style="opacity: 1;"></a> <span-->
+                        <!--class="shadow"><a-->
+                        <!--target="_blank" href="#">-->
+                        <!--科学芈盒走进神木黄庄幼儿园</a></span>-->
+                        <!--</div>-->
+                        <!--<div class="fcon" style="display: none;"><a target="_blank" href="#"><img-->
+                        <!--src="http://www.mxiaotu.com/resource/images/02.jpg" style="opacity: 1;"></a> <span-->
+                        <!--class="shadow"><a-->
+                        <!--target="_blank" href="#">-->
+                        <!--科学芈盒走进神木喜洋洋幼儿园</a></span>-->
+                        <!--</div>-->
+                        <!--<div class="fbg">-->
+                        <!--<div class="D1fBt" id="D1fBt3"><a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>1</i></a> <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a> <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>3</i></a></div>-->
+                        <!--</div>-->
                         <span class="prev"></span> <span class="next"></span></div>
                 </div>
-
             </div>
             <div class="am-u-sm-12 am-u-md-6 in_about">
                 <strong> </strong>
@@ -82,7 +130,7 @@
             <i class=" am-icon-sitemap part-title-i"></i>
             <span class="part-title-span">课程理念</span>
 
-            <p>Curriculum System</p>
+            <p>Curriculum Concept</p>
         </div>
 
         <ul data-am-widget="gallery" class=" am-avg-sm-1
@@ -92,13 +140,13 @@
                     <a href="lesson.html">
                         <p class="kctx_title">
                             STEAM探究式教学</p>
-                        <img src="{DT_STATIC}resource/img/app1.jpg"/>
+                        <img class="lazy" src="{DT_STATIC}resource/img/app1.jpg" data-img="{DT_STATIC}resource/img/app1.jpg"/>
                     </a>
                 </div>
                 <div class="case-li-mengban">
                     <div class=" case-word">
-                        <h3 class="am-gallery-title">年龄特点维度</h3>
-                        <p>不同年龄段对应课程知识点以及实验难度螺旋式上升</p>
+                        <!--<h3 class="am-gallery-title">年龄特点维度</h3>-->
+                        <!--<p>不同年龄段对应课程知识点以及实验难度螺旋式上升</p>-->
                         <a href="lesson.html"><span><i class="am-icon-eye"></i>查看更多</span></a>
                     </div>
                 </div>
@@ -108,14 +156,14 @@
                     <a href="lesson.html?trigger">
                         <p class="kctx_title">
                             设计思维教学方法</p>
-                        <img src="{DT_STATIC}resource/img/app2.jpg"/>
+                        <img class="lazy" src="{DT_STATIC}resource/img/app2.jpg" data-img="{DT_STATIC}resource/img/app2.jpg"/>
                     </a>
                 </div>
                 <div class="case-li-mengban">
                     <div class=" case-word">
-                        <h3 class="am-gallery-title">知识体系维度</h3>
+                        <!--<h3 class="am-gallery-title">知识体系维度</h3>-->
 
-                        <p>涵盖教育部颁布课标的所有知识点</p>
+                        <!--<p>涵盖教育部颁布课标的所有知识点</p>-->
                         <a href="lesson.html?trigger"><span><i class="am-icon-eye"></i>查看更多</span></a>
                     </div>
                 </div>
@@ -125,14 +173,14 @@
                     <a href="lesson.html?trigger1">
                         <p class="kctx_title">
                             螺旋式课程体系与阶段性能力培养</p>
-                        <img src="{DT_STATIC}resource/img/app3.jpg"/>
+                        <img src="{DT_STATIC}resource/img/app3.jpg" data-img="{DT_STATIC}resource/img/app3.jpg"/>
                     </a>
                 </div>
                 <div class="case-li-mengban">
-                    <div class=" case-word">
-                        <h3 class="am-gallery-title">教育理念维度</h3>
+                    <div class="case-word">
+                        <!--<h3 class="am-gallery-title">教育理念维度</h3>-->
 
-                        <p>对应课程知识点和实验内容进行项目制探究式学习</p>
+                        <!--<p>对应课程知识点和实验内容进行项目制探究式学习</p>-->
 
                         <a href="lesson.html?trigger1"><span><i class="am-icon-eye"></i>查看更多</span></a>
                     </div>
@@ -152,19 +200,19 @@
             <i class=" am-icon-graduation-cap part-title-i"></i>
             <span class="part-title-span">课程体系</span>
 
-            <p>Course Presentation</p>
+            <p>Curriculum System</p>
 
         </div>
 
-        <h2 class="index_h2">科学芈盒STEAM课程，<span style="color: #c3cb00">突破传统的静态讲授模式</span></h2>
+        <!--<h2 class="index_h2">科学芈盒STEAM课程，<span style="color: #c3cb00">突破传统的静态讲授模式</span></h2>-->
 
-        <p class="index_p">并以引导为主，引导学生提出问题、思考问题，指导学生动手制作，亲身体验，在动手过程中去解决问题，找出答案</br>真正实现玩中学，学中玩，玩中创</p>
+        <!--<p class="index_p">并以引导为主，引导学生提出问题、思考问题，指导学生动手制作，亲身体验，在动手过程中去解决问题，找出答案</br>真正实现玩中学，学中玩，玩中创</p>-->
 
         <div class="accessory-list col-4">
             <ul class="am-avg-sm-4" style="text-align: center">
                 <li>
-                    <div class="pic">
-                        <a href="lesson-show.html"><img src="{DT_STATIC}resource/img/20ren.png" alt=""></a>
+                    <div class="pic" style="height: 200px;">
+                        <a href="lesson-show.html"><img class="lazy" src="{DT_STATIC}resource/img/20ren.png" alt=""  src="{DT_STATIC}resource/img/20ren.png"></a>
                     </div>
                     <div class="main">
                         <div class="name">幼儿科学探索<p>针对3-6岁儿童</p></div>
@@ -172,8 +220,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="pic">
-                        <a href="lesson-show.html?trigger"><img src="{DT_STATIC}resource/img/qicai.png" alt=""></a>
+                    <div class="pic" style="height: 200px;">
+                        <a href="lesson-show.html?trigger"><img  class="lazy"src="{DT_STATIC}resource/img/qicai.png" alt=""  data-img="{DT_STATIC}resource/img/qicai.png"></a>
                     </div>
                     <div class="main">
                         <div class="name">少儿发明创造<p>针对5-9岁儿童</p></div>
@@ -181,8 +229,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="pic">
-                        <a href="lesson-show.html?trigger1"><img src="{DT_STATIC}resource/img/200ren.png" alt=""></a>
+                    <div class="pic" style="height: 200px;">
+                        <a href="lesson-show.html?trigger1"><img class="lazy" src="{DT_STATIC}resource/img/200ren.png" alt=""  data-img="{DT_STATIC}resource/img/200ren.png"></a>
                     </div>
                     <div class="main">
                         <div class="name">机器人积木构建<p>针对4-8岁儿童</p></div>
@@ -190,8 +238,8 @@
                     </div>
                 </li>
                 <li>
-                    <div class="pic">
-                        <a href="lesson-show.html?trigger2"><img src="{DT_STATIC}resource/img/20ren.png" alt=""></a>
+                    <div class="pic" style="height: 200px;">
+                        <a href="lesson-show.html?trigger2"><img class="lazy" src="{DT_STATIC}resource/img/201ren.png" alt="" data-img="{DT_STATIC}resource/img/201ren.png"></a>
                     </div>
                     <div class="main">
                         <div class="name">人工智能<p>针对5-12岁幼少儿</p></div>
@@ -214,7 +262,7 @@
         <div class="part-title">
             <i class="am-icon-leanpub part-title-i"></i>
             <span class="part-title-span">趣味视频</span>
-            <p>Quality Course</p>
+            <p>Interesting Video</p>
         </div>
         <div style="margin-top: 1.5rem" data-am-widget="tabs"
              class="am-tabs am-tabs-d2">
@@ -233,20 +281,20 @@
                                         <li>
                                             <div class="am-slider-content"><h2 class="am-slider-title"></h2>
 
-                                                <img src="{DT_STATIC}resource/images/youer01.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/youer01.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/youer01.png"/>
 
                                             </div>
                                         </li>
                                         <li>
                                             <div class="am-slider-content"><h2 class="am-slider-title">
                                             </h2>
-                                                <img src="{DT_STATIC}resource/images/youer02.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/youer02.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/youer02.png"/>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="am-slider-content"><h2 class="am-slider-title">
                                             </h2>
-                                                <img src="{DT_STATIC}resource/images/youer03.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/youer03.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/youer03.png"/>
                                             </div>
                                         </li>
                                     </ul>
@@ -265,41 +313,41 @@
                                         <li>
                                             <div class="am-slider-content"><h2 class="am-slider-title"></h2>
 
-                                                <img src="{DT_STATIC}resource/images/shaoer01.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/shaoer01.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/shaoer01.png"/>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="am-slider-content"><h2 class="am-slider-title">
                                             </h2>
 
-                                                <img src="{DT_STATIC}resource/images/shaoer02.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/shaoer02.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/shaoer02.png"/>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="am-slider-content"><h2 class="am-slider-title">
                                             </h2>
 
-                                                <img src="{DT_STATIC}resource/images/shaoer03.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/shaoer03.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/shaoer03.png"/>
                                             </div>
                                         </li>
                                     </ul>
 
                                 </div>
                             </li>
-                            <li class="my-li">
-                                <div class="am-slider-desc">
-                                    <ul style="text-align: center" class="am-avg-sm-1 am-avg-md-3">
-                                        <li>
-                                            <div class="am-slider-content"><h2 class="am-slider-title">
-                                            </h2>
+                            <!--<li class="my-li">-->
+                                <!--<div class="am-slider-desc">-->
+                                    <!--<ul style="text-align: center" class="am-avg-sm-1 am-avg-md-3">-->
+                                        <!--<li>-->
+                                            <!--<div class="am-slider-content"><h2 class="am-slider-title">-->
+                                            <!--</h2>-->
 
-                                                <img src="{DT_STATIC}resource/images/shaoer04.png" class="slider_img" alt=""/>
-                                            </div>
-                                        </li>
+                                                <!--<img src="{DT_STATIC}resource/images/shaoer04.png" class="slider_img" alt=""/>-->
+                                            <!--</div>-->
+                                        <!--</li>-->
 
-                                    </ul>
-                                </div>
-                            </li>
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</li>-->
 
                         </ul>
                     </div>
@@ -313,14 +361,21 @@
                                         <li>
                                             <div class="am-slider-content"><h2 class="am-slider-title"></h2>
 
-                                                <img src="{DT_STATIC}resource/images/zuti01.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/zuti01.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/zuti01.png"/>
 
                                             </div>
                                         </li>
                                         <li>
                                             <div class="am-slider-content">
 
-                                                <img src="{DT_STATIC}resource/images/zuti02.png" class="slider_img" alt=""/>
+                                                <img class="lazy" src="{DT_STATIC}resource/images/zuti02.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/zuti02.png"/>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="am-slider-content">
+
+                                                <img class="lazy" src="{DT_STATIC}resource/images/zuti03.png" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/zuti03.png"/>
 
                                             </div>
                                         </li>
@@ -344,7 +399,7 @@
             <i class="am-icon-newspaper-o part-title-i"></i>
             <span class="part-title-span">新闻动态</span>
 
-            <p>Education column</p>
+            <p>News & Events</p>
         </div>
 
         <div class="am-g am-container-1">
@@ -398,7 +453,7 @@
     <div class="am-g am-container-1">
 
             <div style="color:#333;padding-right: 0" class="am-tabs news" data-am-tabs="{noSwipe: 1}">
-                <img src="{DT_STATIC}resource/images/foot1.jpg" class="slider_img" alt=""/>
+                <img class="lazy" src="{DT_STATIC}resource/images/foot1.jpg" class="slider_img" alt="" data-img="{DT_STATIC}resource/images/foot1.jpg"/>
             </div>
         </div>
 </div>

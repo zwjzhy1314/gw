@@ -169,7 +169,6 @@ function strip_nr($string, $js = false) {
 }
 
 function template($template = 'index', $dir = '') {
-    print_r(333);die;
 	global $CFG, $DT_PC;
 	check_name($template) or exit('BAD TPL NAME');
 	if($dir) check_name($dir) or exit('BAD TPL DIR');

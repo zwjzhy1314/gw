@@ -53,23 +53,27 @@
     <div class="am-container-1">
         <div class="toppic-title left">
             <i class="am-icon-lightbulb-o toppic-title-i"></i>
-            <span class="toppic-title-span">课程展示</span>
-            <p>Course Presentation</p>
+            <span class="toppic-title-span">课程体系</span>
+            <p>Curriculum System</p>
         </div>
         <div class="right toppic-progress">
             <span><a href="/" class="w-white">首页</a></span>
             <i class=" am-icon-arrow-circle-right w-white"></i>
-            <span><a href="lesson-show.html" class="w-white">课程展示</a></span>
+            <span><a href="lesson-show.html" class="w-white">课程体系</a></span>
         </div>
     </div>
 </div>
 
 
 <div class=" am-container-1">
-    <h2 class="index_h2">提升儿童对<span>科学兴趣的培养/科学知识学习</span>的同时</h2>
+    <!--<h2 class="index_h2">提升儿童对<span>科学兴趣的培养/科学知识学习</span>的同时</h2>-->
 
-    <p class="index_p">促进家庭亲子之间的沟通，为儿童创造一个健康快乐成长的环境。</p>
-
+    <!--<p class="index_p">促进家庭亲子之间的沟通，为儿童创造一个健康快乐成长的环境。</p>-->
+    <div class="am-tabs-bd solutions-tabs-content">
+        <div data-tab-panel-0 class="am-tab-panel am-active">
+            <img src="resource/images/cpbz2.jpg" class="am-img-responsive" alt=""/>
+        </div>
+    </div>
     <div data-am-widget="tabs" class="am-tabs am-tabs-d2 " style="text-align: center">
 
         <ul style="margin: 2rem auto;overflow: hidden;overflow-x: auto" class="am-container am-tabs-nav am-cf solutions-tabs-ul">
@@ -82,12 +86,11 @@
         <hr data-am-widget="divider" style="" class="am-divider am-divider-default"/>
         <div class="am-tabs-bd solutions-tabs-content">
             <div data-tab-panel-0 class="am-tab-panel am-active">
-                       <img src="resource/images/cpbz2.jpg" class="am-img-responsive" alt=""/>
                 <img src="resource/images/cpbz10.jpg" class="am-img-responsive" alt=""/>
                 <img src="resource/images/cpbz1.jpg" class="am-img-responsive" alt=""/>
             </div>
             
-            <div id="yj-1" data-tab-panel-2 class="am-tab-panel ">
+            <div id="xt-1" data-tab-panel-2 class="am-tab-panel ">
                 <img src="resource/images/cpzs1.jpg" class="am-img-responsive" alt=""/>
                 
                             </div>
@@ -96,7 +99,7 @@
                 
                 
             </div>
-             <div style="padding-top: 1rem" id="zt-1" data-tab-panel-3 class="am-tab-panel ">
+             <div style="padding-top: 1rem" id="zt-2" data-tab-panel-3 class="am-tab-panel ">
                 <img src="resource/images/cpzs21.jpg" class="am-img-responsive" alt=""/>>
                 
                 
@@ -136,12 +139,12 @@
     if( trigger == 'trigger1' ){
         //trigger click
         $(".solutions-tabs-ul li,.solutions-tabs-content div").removeClass("am-active");
-        $("#yj,#yj-1").addClass("am-active");
+        $("#yj,#zt-1").addClass("am-active");
     }
     if( trigger == 'trigger2' ){
         //trigger click
         $(".solutions-tabs-ul li,.solutions-tabs-content div").removeClass("am-active");
-        $("#zt,#zt-1").addClass("am-active");
+        $("#zt,#zt-2").addClass("am-active");
     }
 </script>
 </html>

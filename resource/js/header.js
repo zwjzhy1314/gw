@@ -8,7 +8,7 @@ document.writeln("        <div class=\'left mi-logo\'>");
 document.writeln("            <img class=\' logo\' src=\'"+dt_static+"MIXIAOTU.png\'/>");
 //document.writeln("            <img class=\'word\' src=\'img/mi-word.png\'/>");
 document.writeln("            <div class=\'mi-title\'>科学芈盒</div>");
-document.writeln("            <div class=\'mi-h2\'>专业的steam教育解决方案服务商</div>");
+document.writeln("            <div class=\'mi-h2\'>专业的STEAM教育解决方案服务商</div>");
 document.writeln("        </div>");
 document.writeln("        <button class=\'am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only\'");
 document.writeln("                data-am-collapse=\"{target: \'#doc-topbar-collapse\'}\"><span class=\'am-sr-only\'>导航切换</span> <span");
@@ -32,8 +32,8 @@ document.writeln("                    <li id=\'nav01\'><a href=\'"+dt_static+"\'
 // document.writeln("                    <li id=\'nav02\'><a href=\'"+dt_static+"brand.html\'>品牌故事</a></li>");
 document.writeln("                    <li id=\'nav03\'><a href='"+dt_static+"lesson.html\'>课程理念</a></li>");
 
-document.writeln("                    <li id=\'nav07\'><a href='"+dt_static+"lesson-show.html\'>课程体系</a></li>");
-document.writeln("                    <li id=\'nav08\'><a href='"+dt_static+"product.html\'>趣味视频</a></li>");
+document.writeln("                    <li id=\'nav02\'><a href='"+dt_static+"lesson-show.html\'>课程体系</a></li>");
+document.writeln("                    <li id=\'nav08\'><a href='"+dt_static+"news/list.php?catid=50\'>趣味视频</a></li>");
 document.writeln("                    <li id=\'nav04\'><a href=\'"+dt_static+"news\/list.php?catid=5\'>新闻动态</a></li>");
 document.writeln("                    <li id=\'nav05\'><a href=\'"+dt_static+"cooperat.html\'>合作共赢</a></li>");
 document.writeln("                    <li id=\'nav06\'><a href=\'"+dt_static+"about-us.html\'>联系我们</a></li>");
@@ -44,20 +44,32 @@ document.writeln("    </div>");
 document.writeln("</header>");
 var lsearchStr=location.href
 if(lsearchStr.indexOf("/")>-1)document.getElementById('nav01').className="mi-menu-active"
-if(lsearchStr.indexOf("/brand.html")>-1)document.getElementById('nav02').className="mi-menu-active"
-if(lsearchStr.indexOf("/brand.html")>-1)document.getElementById('nav01').className=""
+if(lsearchStr.indexOf("/news/list.php")>-1)document.getElementById('nav08').className="mi-menu-active"
+if(lsearchStr.indexOf("/news/list.php")>-1)document.getElementById('nav01').className=""
+if(lsearchStr.indexOf("/news/list.php?catid=50")>-1)document.getElementById('nav08').className="mi-menu-active"
+if(lsearchStr.indexOf("/news/list.php?catid=50")>-1)document.getElementById('nav01').className=""
+if(lsearchStr.indexOf("/news/list.php?catid=50")>-1)document.getElementById('nav04').className=""
+
+if(lsearchStr.indexOf("/news/list.php?catid=5")>-1)document.getElementById('nav04').className="mi-menu-active"
+if(lsearchStr.indexOf("/news/list.php?catid=5")>-1)document.getElementById('nav01').className=""
+if(lsearchStr.indexOf("/news/list.php?catid=5")>-1)document.getElementById('nav08').className=""
+if(lsearchStr.indexOf("/news/list.php?catid=4")>-1)document.getElementById('nav04').className="mi-menu-active"
+if(lsearchStr.indexOf("/news/list.php?catid=4")>-1)document.getElementById('nav01').className=""
+if(lsearchStr.indexOf("/news/list.php?catid=4")>-1)document.getElementById('nav08').className=""
+if(lsearchStr.indexOf("/lesson-show.html")>-1)document.getElementById('nav02').className="mi-menu-active"
+if(lsearchStr.indexOf("/lesson-show.html")>-1)document.getElementById('nav01').className=""
 if(lsearchStr.indexOf("/lesson.html")>-1)document.getElementById('nav03').className="mi-menu-active"
 if(lsearchStr.indexOf("/lesson.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav04').className="mi-menu-active"
-if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav04').className="mi-menu-active"
+// if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav01').className=""
 if(lsearchStr.indexOf("/cooperat.html")>-1)document.getElementById('nav05').className="mi-menu-active"
 if(lsearchStr.indexOf("/cooperat.html")>-1)document.getElementById('nav01').className=""
 if(lsearchStr.indexOf("/about-us.html")>-1)document.getElementById('nav06').className="mi-menu-active"
 if(lsearchStr.indexOf("/about-us.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav04').className="mi-menu-active"
-if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav04').className="mi-menu-active"
-if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav04').className="mi-menu-active"
+// if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav04').className="mi-menu-active"
+// if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav01').className=""
 
 
 

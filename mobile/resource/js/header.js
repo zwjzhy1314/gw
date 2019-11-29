@@ -38,21 +38,21 @@ document.writeln("        </div>");
 document.writeln("    </div>");
 document.writeln("</header>");
 var lsearchStr=location.href
-if(lsearchStr.indexOf("/")>-1)document.getElementById('nav01').className="mi-menu-active"
-if(lsearchStr.indexOf("/brand.html")>-1)document.getElementById('nav02').className="mi-menu-active"
-if(lsearchStr.indexOf("/brand.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/lesson.html")>-1)document.getElementById('nav03').className="mi-menu-active"
-if(lsearchStr.indexOf("/lesson.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav04').className="mi-menu-active"
-if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/cooperat.html")>-1)document.getElementById('nav05').className="mi-menu-active"
-if(lsearchStr.indexOf("/cooperat.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/about-us.html")>-1)document.getElementById('nav06').className="mi-menu-active"
-if(lsearchStr.indexOf("/about-us.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav04').className="mi-menu-active"
-if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav01').className=""
-if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav04').className="mi-menu-active"
-if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/")>-1)document.getElementById('nav01').className="mi-menu-active"
+// if(lsearchStr.indexOf("/brand.html")>-1)document.getElementById('nav02').className="mi-menu-active"
+// if(lsearchStr.indexOf("/brand.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/lesson.html")>-1)document.getElementById('nav03').className="mi-menu-active"
+// if(lsearchStr.indexOf("/lesson.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav04').className="mi-menu-active"
+// if(lsearchStr.indexOf("/news.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/cooperat.html")>-1)document.getElementById('nav05').className="mi-menu-active"
+// if(lsearchStr.indexOf("/cooperat.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/about-us.html")>-1)document.getElementById('nav06').className="mi-menu-active"
+// if(lsearchStr.indexOf("/about-us.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav04').className="mi-menu-active"
+// if(lsearchStr.indexOf("/news-2.html")>-1)document.getElementById('nav01').className=""
+// if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav04').className="mi-menu-active"
+// if(lsearchStr.indexOf("/news-infor.html")>-1)document.getElementById('nav01').className=""
 
 
 
